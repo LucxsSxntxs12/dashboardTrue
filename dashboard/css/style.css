@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat';
+}
+html,body{
+    background-color: #FAF9FC;
+    height: 100%;
+}
+.clear{clear: both;}
+div.sidebar{
+    float: left;
+    height: 100%;
+    width: 300px;
+    background-color: #2d3035;
+}
+div.topo{
+    background-color: #26282d;
+    text-align: center;
+    padding: 20px 10px;
+}
+div.topo h3{
+    color: white;
+}
+div.menu{
+    padding: 30px;
+}
+div.menu ul{
+    list-style-type: none;
+}
+div.menu li{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #717171;
+}
+div.menu ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #717171;
+}
+div.menu ul li a:hover {
+    color: white;
+}
+div.menu li:hover i{
+    transition: 0.6s ease-in-out;
+    color: #6D3BB8;
+}
+div.menu li:hover a{
+    transition: 0.6s ease-in-out;
+    color: white;
+}
+
+/*
+    FIM DA SIDEBAR
+*/
+
+
+div.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+header{
+    background-color: white;
+    padding: 20px 15px;
+    height: 90px;
+    border-bottom: 2px solid #ccc;
+}
+.pesquisa-campo{
+    float: right;
+}
+.icone-pesquisa{
+    background-color: #d6d6d6;
+    width: 30px;
+    height: 30px;   
+    color: white;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icone-pesquisa i{
+    position: relative;
+    top: 5px;
+}
+.pesquisa-campo form{
+    vertical-align: middle;
+    display: inline-block;
+}
+.pesquisa-campo input[type=text]{
+    width: 200px;
+    height: 30px;
+    outline: 0;
+    padding-left: 10px;
+    font-size: 16px;
+    border-left: 0;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.icone-alerta{
+    cursor: pointer;
+    float: right;
+    margin-right: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #FBEDEF;
+    position: relative;
+}
+.icone-alerta p{
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    display: inline-block;
+    background-color: #ed7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+.icone-alerta i{
+    line-height: 30px;
+    font-weight: bold;
+    color: #ed6387;
+    font-size: 18px;
+}
+.nome-usuario{
+    float: left;
+}
+.nome-usuario h2{
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 23   px;
+    color: #A7A7A7;
+    cursor: pointer;
+}
+
+.content1{
+    float: left;
+    width: 70%;
+    padding: 30px;
+    max-height: calc(100% - 90px);
+    overflow: auto;
+
+}
+.panel{
+    margin-bottom: 10px;
+    padding: 30px;
+    border: 2px solid #ebebeb;
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+.panel h2{
+    color: #7f7f7f;
+    font-size: 24px;
+    font-weight: normal;
+}
+.panel span{
+    cursor: pointer;
+    display: inline-block;
+    color: #b2b2b2;
+    font-size: 17px;
+    margin: 20px 10px;
+    padding: 5px;
+    border-radius: 29px;
+    border: 2px solid #ccc;
+    transition: 0.4s;
+    
+}
+.panel span:hover{
+    transform: scale(1.1);
+    background-color: #e9ebeb;
+}
+.ultimas-atividades{
+  text-align: center;
+  width: 30%;
+  padding: 20px 30px;
+  background-color: #eaebeb;
+  height: calc(100% - 90px);
+  overflow-y: auto ;
+  float: left;
+}
+.atividades-topo h2{
+    color: #7F7F7F;
+    font-size: 23px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    font-weight: normal;
+}
+.atividades-registro{
+    padding: 15px 10px;
+    border-left: 1px solid #bbb;
+    position: relative;
+}
+.atividades-registro h2{
+    color: #bbb;
+    font-size: 18px;
+    font-weight: normal;
+}
+.atividades-registro p{
+    color: #b2b2b2;
+    font-size: 15px;
+}
+.circle-atividade{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e9ebeb;
+    border: 1px solid #cccccc;
+    position: absolute;
+    top:-10px;
+    left: -10px;
+}
+@media screen and (max-width:768px){
+    .ultimas-atividades{
+        display: none;
+    }
+    .content1{
+        width: 100%;
+    }
+    .panel{width: 100% !important;}
+    .sidebar{display: none; position: relative;z-index:999; transition: 0.8s;}
+    div.main-content{width: 100%;
+        position:absolute;
+        left: 0;
+        top: 0;
+        transition: 0.8s;
+    }
+}
